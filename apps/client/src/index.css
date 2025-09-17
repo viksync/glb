@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+html,
+body {
+    background: rgb(27, 40, 56);
+    color: rgb(198, 212, 223);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
