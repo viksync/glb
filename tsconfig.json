@@ -16,7 +16,7 @@
         "verbatimModuleSyntax": true,
         "baseUrl": ".",
         "paths": {
-            "@glb/shared/*": ["packages/shared/src/*"]
+            "@shared/*": ["packages/shared/src/*"]
         }
     },
     "exclude": ["node_modules", "**/node_modules", "**/dist", "**/build"]

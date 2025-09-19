@@ -19,8 +19,10 @@ export default function useGameData(serverUrl: string) {
             console.log(games);
 
             setGamesData(games);
+            return games;
         } catch (error) {
             console.error('Failed to fetch games:', error);
+            return null;
         }
     }
 

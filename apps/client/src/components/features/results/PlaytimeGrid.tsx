@@ -19,27 +19,27 @@ export default function PlaytimeGrid({ games, birthDate }: PlaytimeGridProps) {
     const items = Array.from({ length: lifeDays });
 
     return (
-        <div className=''>
+        <div className='w-full px-32'>
             <div className='flex justify-center gap-8'>
-                <h2 className='mb-6 text-2xl font-bold text-white'>
+                <h2 className='mb-6 text-2xl font-bold text-black'>
                     Life: {totalLife} days
                 </h2>
 
-                <h2 className='mb-6 text-2xl font-bold text-white'>
+                <h2 className='mb-6 text-2xl font-bold text-black'>
                     Games: {gameDays} days
                 </h2>
 
-                <h2 className='mb-6 text-2xl font-bold text-white'>
+                <h2 className='mb-6 text-2xl font-bold text-black'>
                     Ratio: {((gameDays / totalLife) * 100).toFixed(2)} %
                 </h2>
             </div>
-            <div className='grid grid-cols-64 gap-1 px-64'>
+            <div className='grid grid-cols-64'>
                 {gameItems.map((_, i) => (
-                    <div key={i} className='h-[8px] bg-yellow-500'></div>
+                    <div key={i} className='h-[2px] bg-pink-200'></div>
                 ))}
 
                 {items.map((_, i) => (
-                    <div key={i} className='h-[8px] bg-blue-500'></div>
+                    <div key={i} className='h-[2px] bg-gray-500'></div>
                 ))}
             </div>
         </div>

@@ -10,7 +10,7 @@ const serverUrl = server === 'local' ? localhost : ghWorkspace;
 
 const defaultFormData: FormData =
     env === 'dev' ?
-        { username: 'unicode2929', dob: '1993-04-13' }
-    :   { username: '', dob: '' };
+        { username: 'unicode2929', steamid: '', dob: '1993-04-13' }
+    :   { username: '', steamid: '', dob: '' };
 
 export default { serverUrl, defaultFormData };

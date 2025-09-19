@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import appConfig from '@/config';
+import appConfig from '@/constants/appConfig';
 
-type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;
 type FormEvent = React.FormEvent<HTMLFormElement>;
 
 export interface FormData {
     username: string;
+    steamid: string;
     dob: string;
 }
 
@@ -15,7 +15,7 @@ interface UseFormDataConfig {
 
 export interface UseFormDataReturn {
     formData: FormData;
-    onChange: (e: InputChangeEvent) => void;
+    onChange: (name: string, value: string) => void;
     onSubmit: (e: FormEvent) => Promise<void>;
     isLoading: boolean;
 }
@@ -29,8 +29,7 @@ export default function useFormData(
         appConfig.defaultFormData,
     );
 
-    const onChange = (e: InputChangeEvent) => {
-        const { name, value } = e.target;
+    const onChange = (name: string, value: string) => {
         setFormData((prev) => ({
             ...prev,
             [name]: value,
